@@ -64,5 +64,16 @@ class HomeController extends GetxController{
       }
   }
 
+  void searchData(String value)
+  {
+    if(value.isNotEmpty || value!='')
+    {
+      contactList.value = contactList.where((contact) => contact.name.contains(value),).toList();
+    } else{
+      contactDetailsShow();
+    }
+    update();
+    contactList.refresh();
+  }
 
 }

@@ -2,7 +2,6 @@ import 'package:final_test/utils/color.dart';
 import 'package:final_test/view/controller/home_controller.dart';
 import 'package:final_test/view/helper/db_services.dart';
 import 'package:final_test/view/screen/home/componects/add_to_details.dart';
-import 'package:final_test/view/screen/sign/componects/text_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -56,6 +55,14 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SearchBar(
+              onChanged: (value) {
+                homeController.searchData(value);
+              },
+            ),
+          ),
           Expanded(
             child: Obx(
               () => (homeController.contactList.isEmpty)

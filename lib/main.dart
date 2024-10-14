@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'firebase_options.dart';
-import 'view/screen/sign/signup_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
