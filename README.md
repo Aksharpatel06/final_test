@@ -1,19 +1,25 @@
-# final_test
 
-A new Flutter project.
 
-## Getting Started
+# Contact Management App
 
-This project is a starting point for a Flutter application.
+A Flutter application that manages your contacts efficiently, with local storage powered by SQLite and cloud backup using Firebase. This app offers a simple and intuitive UI to add, edit, and delete contacts, ensuring data is secure with both offline and online storage capabilities.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Local Storage with SQLite**: Store contacts locally on the device for offline access and fast retrieval.
+- **Firebase Backup**: Seamlessly back up contacts to Firebase Cloud Firestore to ensure data is always secure and accessible from any device.
+- **Add, Edit, Delete Contacts**: Easily manage your contacts with simple forms for creating and editing contact details.
+- **Data Synchronization**: Sync contacts between local SQLite and Firebase, ensuring no data loss when switching devices or uninstalling the app.
+- **Search Contacts**: Quickly search through contacts by name.
+- **Contact Details View**: View detailed information for each contact.
+- **Responsive Design**: Adapts to both Android and iOS devices.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies Used
+
+- **Flutter**: For building the cross-platform mobile application.
+- **SQLite**: For local data storage.
+- **Firebase Firestore**: For cloud-based contact backup and synchronization.
+- **GetX** or **Provider**: (Optional) State management for smoother navigation and state handling across the app.
 
 
 ['video'](https://drive.google.com/file/d/16fO2k2BNQW05jzgvBDCviBnp3E1Zx2jJ/view?usp=sharing)
