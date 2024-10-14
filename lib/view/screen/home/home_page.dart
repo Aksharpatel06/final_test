@@ -1,6 +1,7 @@
 import 'package:final_test/utils/color.dart';
 import 'package:final_test/view/controller/home_controller.dart';
 import 'package:final_test/view/helper/db_services.dart';
+import 'package:final_test/view/screen/details/details_page.dart';
 import 'package:final_test/view/screen/home/componects/add_to_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,9 +34,14 @@ class HomePage extends StatelessWidget {
                       onPressed: () {
                         homeController.allDataStoreToDataBase();
                         Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailsPage()));
                       },
                       child: Text('Yes'),
-                    ),TextButton(
+                    ),
+                    TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },

@@ -20,8 +20,12 @@ class SignupPage extends StatelessWidget {
         key: homeController.signUpKey,
         child: SingleChildScrollView(
           child: Column(
+
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 200,
+              ),
               Text(
                 'SignUp',
                 style: TextStyle(
