@@ -1,5 +1,5 @@
 import 'package:final_test/view/controller/home_controller.dart';
-import 'package:final_test/view/screen/sign/signin_page.dart';
+import 'package:final_test/view/screen/splash/splash_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     Get.put(HomeController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SigninPage(),
+      home: SplashPage(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -44,9 +46,9 @@ class DbServices {
   Future<List> showDatabase()
   async {
     final db = await database;
-
     String query ='SELECT * FROM Contact';
     List data =await db!.rawQuery(query);
+    log(data.length.toString());
     return data;
   }
 
@@ -60,13 +62,16 @@ class DbServices {
     db!.rawDelete(query,args);
   }
 
-  Future<void> updateDatabase()
+  Future<void> updateDatabase(Map contact,int id)
   async {
     final db = await database;
-    // List args=[
-    //   +
-    // ];
-    String query ='DELETE FROM Contact WHERE id = ?';
-    db!.rawDelete(query);
+    List args =[
+      contact['name'],
+      contact['phoneNumber'],
+      contact['email'],
+      id
+    ];
+    String query ='UPDATE Contact SET name = ?, phoneNumber = ? ,email =? WHERE id = ?';
+    db!.rawUpdate(query,args);
   }
 }

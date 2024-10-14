@@ -13,7 +13,7 @@ class ContactModal {
         email: json['email']);
   }
 
-  Map mapToModal(ContactModal contact)
+  Map<String, dynamic> mapToModal(ContactModal contact)
   {
     return {
       'id':contact.id,
