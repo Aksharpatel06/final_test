@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 const bgColor = Color(0xffE2F1E7);
